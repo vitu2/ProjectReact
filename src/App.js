@@ -17,6 +17,7 @@ function App() {
   let [produtosCarrinho, setProdutosCarrinho] = useState([]);
    //let url = 'http://15.228.244.21:3000'
   let url = 'http://localhost:80';
+  
 
   useEffect(() => {
     if (localStorage.customerData) {
