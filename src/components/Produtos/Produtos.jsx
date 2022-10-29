@@ -12,18 +12,18 @@ export const Produtos = ({ produto, url }) => {
 
   const [update, setUpdate] = useState(false);
 
-  let numberOfStars = useRef(1);
-  let totalStars = useRef(0);
+  let numberOfStars = useRef(5);
+  let totalStars = useRef(100);
 
-  useEffect(() => {
-    fetch(`url/${produto.product_id}`)
-      .then((res) => res.json())
-      .then((resultado) => {
-        totalStars.current = resultado[0].totalStars;
-        numberOfStars.current = resultado[0].numberOfStars;
-        setUpdate(!update);
-      });
-  }, [produto.product_id]);
+  // useEffect(() => {
+  //   fetch(`url/${produto.product_id}`)
+  //     .then((res) => res.json())
+  //     .then((resultado) => {
+  //       totalStars.current = resultado[0].totalStars;
+  //       numberOfStars.current = resultado[0].numberOfStars;
+  //       setUpdate(!update);
+  //     });
+  // }, [produto.product_id]);
 
 
   //Stars//
